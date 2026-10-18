@@ -1,0 +1,95 @@
+{
+  "action_id": 2,
+  "activity_id": 1,
+  "actor": {
+    "process": {
+      "name": "codex",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "OpenAI",
+      "name": "gpt-5-codex",
+      "uid": "gpt-5-codex"
+    },
+    "instance_uid": "codex-sess-1",
+    "name": "codex",
+    "type_id": 99,
+    "uid": "codex",
+    "version": "0.40.0"
+  },
+  "ai_model": {
+    "ai_provider": "OpenAI",
+    "name": "gpt-5-codex",
+    "uid": "gpt-5-codex"
+  },
+  "category_uid": 1,
+  "class_uid": 1007,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "disposition_id": 2,
+  "enrichments": [
+    {
+      "data": {
+        "approval_policy": "on-request",
+        "cwd": "/repo",
+        "hook_event": "PermissionRequest",
+        "sandbox": "workspace-write",
+        "source": "codex"
+      },
+      "name": "agent_posture",
+      "value": "codex"
+    }
+  ],
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "codex",
+      "uid": "codex"
+    },
+    "prompt_text": "build the project",
+    "uid": "turn-1"
+  },
+  "metadata": {
+    "correlation_uid": "codex-sess-1",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "52daaabb4810c2f341ef3da8ca039158",
+    "version": "1.9.0"
+  },
+  "observables": [
+    {
+      "name": "process.cmd_line",
+      "type_id": 13,
+      "value": "rm -rf /"
+    }
+  ],
+  "process": {
+    "cmd_line": "rm -rf /",
+    "parent_process": {
+      "name": "codex",
+      "pid": 0
+    },
+    "pid": 0,
+    "working_directory": "/repo"
+  },
+  "severity_id": 1,
+  "status_id": 0,
+  "time": 1758326400000,
+  "type_uid": 100701
+}

@@ -1,0 +1,48 @@
+[project]
+name = "stationchief"
+version = "0.1.0"
+description = "The station chief for your AI agents: every move reported, risky operations stopped before they run."
+requires-python = ">=3.14"
+readme = "README.md"
+authors = [{ name = "Aniruddha Biyani" }]
+keywords = ["security", "ocsf", "siem", "ai-agents", "claude-code", "cursor", "codex", "opa", "telemetry"]
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+otel = ["opentelemetry-sdk>=1.25"]
+dev = ["pytest>=8.0", "httpx2>=2.0"]
+server = ["starlette>=0.40", "uvicorn>=0.30", "anyio>=4"]
+s3 = ["boto3>=1.34"]
+gcs = ["google-cloud-storage>=2.14"]
+
+[project.scripts]
+stationchief = "stationchief.cli:main"
+stationchief-server = "stationchief.server.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["stationchief*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "network: hits schema.ocsf.io; not run by default",
+  "perf: measures hook cold start; not run by default",
+  "opa: needs STATIONCHIEF_TEST_OPA_URL; not run by default",
+]
+addopts = "-m 'not network and not perf and not opa'"
+
+[project.urls]
+Homepage = "https://github.com/anirudhbiyani/stationchief"
+Issues = "https://github.com/anirudhbiyani/stationchief/issues"
+Security = "https://github.com/anirudhbiyani/stationchief/security"

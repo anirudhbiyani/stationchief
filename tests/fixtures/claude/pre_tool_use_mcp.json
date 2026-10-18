@@ -1,0 +1,9 @@
+{
+  "session_id": "sess-abc",
+  "transcript_path": "/Users/dev/.claude/projects/repo/sess-abc.jsonl",
+  "cwd": "/repo",
+  "permission_mode": "default",
+  "hook_event_name": "PreToolUse",
+  "tool_name": "mcp__github__create_issue",
+  "tool_input": {"repo": "acme/app", "title": "crash on startup"}
+}

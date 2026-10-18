@@ -1,0 +1,42 @@
+# Local development stack: stationchief service + OPA policy sidecar.
+# Production differs in three ways: TLS at an ingress, events stored in S3 or
+# GCS (set STATIONCHIEF_STORAGE_URL and drop --memory), and OPA pulling policy from
+# a bundle server (S3/GCS/HTTP) instead of ./policy.
+services:
+  opa:
+    # Pinned to the version the policy tests ran against. Bump deliberately
+    # and re-run `opa test policy/` before changing this.
+    image: openpolicyagent/opa:1.21.0-static@sha256:9eb36ac3ceb3b855e776e60926a8a5142f96109a219a5fcd490fa1744c755bec
+    command: ["run", "--server", "--addr", "0.0.0.0:8181", "/policy"]
+    volumes:
+      - ./policy:/policy:ro
+    # Not published: only the stationchief service on this network may ask OPA.
+
+  stationchief:
+    build: .
+    depends_on:
+      opa:
+        condition: service_started
+    environment:
+      STATIONCHIEF_SERVER_CONFIG: /etc/stationchief/server.json
+      # For real storage: STATIONCHIEF_STORAGE_URL: s3://bucket/prefix (or gs://...),
+      # plus the SDK's usual credentials, and remove --memory below.
+    volumes:
+      - ./deploy/server.json:/etc/stationchief/server.json:ro
+    command: ["python", "-m", "stationchief.server.cli", "serve", "--host", "0.0.0.0", "--port", "8080", "--memory"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    # Hardening: nothing in the image needs to write, escalate, or hold a
+    # Linux capability.
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      # The slim image has no curl; python is already there.
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 3

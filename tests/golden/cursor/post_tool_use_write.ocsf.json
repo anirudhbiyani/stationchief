@@ -1,0 +1,89 @@
+{
+  "action_id": 3,
+  "activity_id": 1,
+  "actor": {
+    "process": {
+      "name": "cursor",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "Cursor",
+      "name": "composer-1",
+      "uid": "composer-1"
+    },
+    "instance_uid": "conv-xyz",
+    "name": "cursor",
+    "type_id": 99,
+    "uid": "cursor",
+    "version": "unknown"
+  },
+  "ai_model": {
+    "ai_provider": "Cursor",
+    "name": "composer-1",
+    "uid": "composer-1"
+  },
+  "category_uid": 1,
+  "class_uid": 1001,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "cwd": "/repo",
+        "hook_event": "postToolUse",
+        "permission_mode": "unknown",
+        "source": "cursor"
+      },
+      "name": "agent_posture",
+      "value": "cursor"
+    }
+  ],
+  "file": {
+    "name": "new.ts",
+    "path": "/repo/src/new.ts",
+    "type_id": 1
+  },
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "cursor",
+      "uid": "cursor"
+    },
+    "prompt_text": "install the dependencies",
+    "uid": "gen-1"
+  },
+  "metadata": {
+    "correlation_uid": "conv-xyz",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "f332c82100483d4af629b3349fe9bb35",
+    "version": "1.9.0"
+  },
+  "observables": [
+    {
+      "name": "file.path",
+      "type_id": 45,
+      "value": "/repo/src/new.ts"
+    }
+  ],
+  "severity_id": 1,
+  "status_id": 1,
+  "time": 1758326400000,
+  "type_uid": 100101
+}

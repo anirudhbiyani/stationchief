@@ -1,0 +1,7 @@
+{
+  "session_id": "sess-abc",
+  "transcript_path": "/Users/dev/.claude/projects/repo/sess-abc.jsonl",
+  "cwd": "/repo",
+  "hook_event_name": "UserPromptSubmit",
+  "prompt": "clean up the build directory"
+}

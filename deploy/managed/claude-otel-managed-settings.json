@@ -1,0 +1,10 @@
+{
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_LOGS_EXPORTER": "otlp",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/json",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "https://stationchief.example.com/otel",
+    "OTEL_LOG_TOOL_DETAILS": "1"
+  },
+  "otelHeadersHelper": "/opt/stationchief/venv/bin/python -c \"import json,pathlib;print(json.dumps({'Authorization':'Bearer '+json.loads((pathlib.Path.home()/'.stationchief'/'config.json').read_text())['server_token']}))\""
+}

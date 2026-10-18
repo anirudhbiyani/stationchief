@@ -1,0 +1,8 @@
+{
+  "_comment": "LOCAL DEVELOPMENT ONLY. The token below is 'dev-only-token-change-me'. Generate real entries with: printf '%s' \"$TOKEN\" | stationchief-server hash-token",
+  "tokens": {
+    "d4a4df7fb16567bcc7bce12b6a210e002a7f7cc465171e6e26441804928adb83": "local-dev"
+  },
+  "engine": {"type": "opa", "url": "http://opa:8181", "path": "stationchief/check/decision", "timeout_ms": 250},
+  "on_engine_error": "allow"
+}

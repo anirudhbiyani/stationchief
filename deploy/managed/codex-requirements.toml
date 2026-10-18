@@ -1,0 +1,58 @@
+# StationChief: managed hooks. Merge into your existing requirements.toml.
+allow_managed_hooks_only = false  # true also disables every developer's own hooks
+
+[features]
+hooks = true
+
+[hooks]
+managed_dir = "/opt/stationchief"
+
+[[hooks.SessionStart]]
+[[hooks.SessionStart.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.UserPromptSubmit]]
+[[hooks.UserPromptSubmit.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.PreToolUse]]
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.PostToolUse]]
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.PermissionRequest]]
+[[hooks.PermissionRequest.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.PreCompact]]
+[[hooks.PreCompact.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.PostCompact]]
+[[hooks.PostCompact.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.SubagentStart]]
+[[hooks.SubagentStart.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.SubagentStop]]
+[[hooks.SubagentStop.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"
+
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "/opt/stationchief/venv/bin/python -m stationchief.cli hook codex  # stationchief-managed"

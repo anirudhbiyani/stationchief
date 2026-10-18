@@ -1,0 +1,89 @@
+{
+  "action_id": 3,
+  "activity_id": 3,
+  "actor": {
+    "process": {
+      "name": "claude-code",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "Anthropic",
+      "name": "claude-opus-5",
+      "uid": "claude-opus-5"
+    },
+    "instance_uid": "sess-abc",
+    "name": "claude-code",
+    "type_id": 99,
+    "uid": "claude-code",
+    "version": "2.0.1"
+  },
+  "ai_model": {
+    "ai_provider": "Anthropic",
+    "name": "claude-opus-5",
+    "uid": "claude-opus-5"
+  },
+  "category_uid": 1,
+  "class_uid": 1001,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "cwd": "/repo",
+        "hook_event": "PostToolUse",
+        "permission_mode": "acceptEdits",
+        "source": "claude"
+      },
+      "name": "agent_posture",
+      "value": "claude"
+    }
+  ],
+  "file": {
+    "name": "app.py",
+    "path": "/repo/src/app.py",
+    "type_id": 1
+  },
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "claude-code",
+      "uid": "claude-code"
+    },
+    "prompt_text": "clean up the build directory",
+    "uid": "turn-1"
+  },
+  "metadata": {
+    "correlation_uid": "sess-abc",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "274ede59617d36b9a182364d1181fcc4",
+    "version": "1.9.0"
+  },
+  "observables": [
+    {
+      "name": "file.path",
+      "type_id": 45,
+      "value": "/repo/src/app.py"
+    }
+  ],
+  "severity_id": 1,
+  "status_id": 1,
+  "time": 1758326400000,
+  "type_uid": 100103
+}

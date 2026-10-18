@@ -1,0 +1,93 @@
+{
+  "action_id": 3,
+  "activity_id": 0,
+  "actor": {
+    "process": {
+      "name": "cursor",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "Cursor",
+      "name": "claude-opus-5",
+      "uid": "claude-opus-5"
+    },
+    "instance_uid": "conv-1",
+    "name": "cursor",
+    "type_id": 99,
+    "uid": "cursor",
+    "version": "unknown"
+  },
+  "ai_model": {
+    "ai_provider": "Cursor",
+    "name": "claude-opus-5",
+    "uid": "claude-opus-5"
+  },
+  "api": {
+    "operation": "create_issue",
+    "request": {
+      "data": {
+        "title": "bug"
+      },
+      "uid": "e0d00aa6f56fa7005e981438c6c8cd90"
+    },
+    "service": {
+      "name": "github"
+    }
+  },
+  "category_uid": 6,
+  "class_uid": 6003,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "capture": "transcript",
+        "cwd": "/repo",
+        "hook_event": "transcript",
+        "source": "cursor",
+        "tool_call_id": "toolu_4"
+      },
+      "name": "agent_posture",
+      "value": "cursor"
+    }
+  ],
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "cursor",
+      "uid": "cursor"
+    },
+    "prompt_text": "clean up the build",
+    "uid": "b1"
+  },
+  "metadata": {
+    "correlation_uid": "conv-1",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "e0d00aa6f56fa7005e981438c6c8cd90",
+    "version": "1.9.0"
+  },
+  "severity_id": 1,
+  "src_endpoint": {
+    "hostname": "laptop"
+  },
+  "status_id": 1,
+  "time": 1789898420000,
+  "type_uid": 600300
+}

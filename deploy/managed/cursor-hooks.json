@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook cursor  # stationchief-managed"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook cursor  # stationchief-managed"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook cursor  # stationchief-managed"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook cursor  # stationchief-managed",
+        "failClosed": true
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook cursor  # stationchief-managed"
+      }
+    ]
+  },
+  "version": 1
+}

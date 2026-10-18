@@ -1,0 +1,93 @@
+{
+  "action_id": 3,
+  "activity_id": 0,
+  "actor": {
+    "process": {
+      "name": "claude-code",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "Anthropic",
+      "name": "claude-opus-5",
+      "uid": "claude-opus-5"
+    },
+    "instance_uid": "sess-abc",
+    "name": "claude-code",
+    "type_id": 99,
+    "uid": "claude-code",
+    "version": "2.0.1"
+  },
+  "ai_model": {
+    "ai_provider": "Anthropic",
+    "name": "claude-opus-5",
+    "uid": "claude-opus-5"
+  },
+  "api": {
+    "operation": "create_issue",
+    "request": {
+      "data": {
+        "repo": "acme/app",
+        "title": "crash on startup"
+      },
+      "uid": "7a2aa488cbf545c2e30bd0293354ec8e"
+    },
+    "service": {
+      "name": "github"
+    }
+  },
+  "category_uid": 6,
+  "class_uid": 6003,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "cwd": "/repo",
+        "hook_event": "PreToolUse",
+        "permission_mode": "default",
+        "source": "claude"
+      },
+      "name": "agent_posture",
+      "value": "claude"
+    }
+  ],
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "claude-code",
+      "uid": "claude-code"
+    },
+    "prompt_text": "clean up the build directory",
+    "uid": "turn-1"
+  },
+  "metadata": {
+    "correlation_uid": "sess-abc",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "7a2aa488cbf545c2e30bd0293354ec8e",
+    "version": "1.9.0"
+  },
+  "severity_id": 1,
+  "src_endpoint": {
+    "hostname": "laptop"
+  },
+  "status_id": 0,
+  "time": 1758326400000,
+  "type_uid": 600300
+}

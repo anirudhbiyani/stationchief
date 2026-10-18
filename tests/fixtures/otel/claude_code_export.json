@@ -1,0 +1,49 @@
+{
+  "_comment": "STARTER FIXTURE from Claude Code's published telemetry docs. Replace with a real, scrubbed export in Task S4 Step 6.",
+  "resourceLogs": [
+    {
+      "resource": {"attributes": [
+        {"key": "service.name", "value": {"stringValue": "claude-code"}},
+        {"key": "service.version", "value": {"stringValue": "2.0.1"}},
+        {"key": "host.name", "value": {"stringValue": "laptop"}}
+      ]},
+      "scopeLogs": [{"scope": {"name": "com.anthropic.claude_code.events"}, "logRecords": [
+        {"timeUnixNano": "1789898400000000000", "attributes": [
+          {"key": "event.name", "value": {"stringValue": "claude_code.user_prompt"}},
+          {"key": "session.id", "value": {"stringValue": "sess-native"}},
+          {"key": "prompt.id", "value": {"stringValue": "prompt-1"}},
+          {"key": "user.email", "value": {"stringValue": "dev@example.com"}},
+          {"key": "user.account_uuid", "value": {"stringValue": "acct-1"}},
+          {"key": "prompt_length", "value": {"stringValue": "40"}},
+          {"key": "prompt", "value": {"stringValue": "deploy with AKIAIOSFODNN7EXAMPLE please"}}
+        ]},
+        {"timeUnixNano": "1789898401000000000", "attributes": [
+          {"key": "event.name", "value": {"stringValue": "claude_code.tool_decision"}},
+          {"key": "session.id", "value": {"stringValue": "sess-native"}},
+          {"key": "prompt.id", "value": {"stringValue": "prompt-1"}},
+          {"key": "user.email", "value": {"stringValue": "dev@example.com"}},
+          {"key": "tool_name", "value": {"stringValue": "Bash"}},
+          {"key": "decision", "value": {"stringValue": "accept"}},
+          {"key": "source", "value": {"stringValue": "user_temporary"}}
+        ]},
+        {"timeUnixNano": "1789898402000000000", "attributes": [
+          {"key": "event.name", "value": {"stringValue": "claude_code.tool_result"}},
+          {"key": "session.id", "value": {"stringValue": "sess-native"}},
+          {"key": "prompt.id", "value": {"stringValue": "prompt-1"}},
+          {"key": "user.email", "value": {"stringValue": "dev@example.com"}},
+          {"key": "tool_name", "value": {"stringValue": "Bash"}},
+          {"key": "success", "value": {"stringValue": "true"}},
+          {"key": "duration_ms", "value": {"stringValue": "120"}},
+          {"key": "decision", "value": {"stringValue": "accept"}},
+          {"key": "tool_parameters", "value": {"stringValue": "{\"bash_command\": \"ls\", \"full_command\": \"ls -la\"}"}}
+        ]},
+        {"timeUnixNano": "1789898403000000000", "attributes": [
+          {"key": "event.name", "value": {"stringValue": "claude_code.api_request"}},
+          {"key": "session.id", "value": {"stringValue": "sess-native"}},
+          {"key": "model", "value": {"stringValue": "claude-opus-5"}},
+          {"key": "cost_usd", "value": {"stringValue": "0.01"}}
+        ]}
+      ]}]
+    }
+  ]
+}

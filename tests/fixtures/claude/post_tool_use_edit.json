@@ -1,0 +1,10 @@
+{
+  "session_id": "sess-abc",
+  "transcript_path": "/Users/dev/.claude/projects/repo/sess-abc.jsonl",
+  "cwd": "/repo",
+  "permission_mode": "acceptEdits",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Edit",
+  "tool_input": {"file_path": "/repo/src/app.py", "old_string": "a", "new_string": "b"},
+  "tool_response": {"filePath": "/repo/src/app.py", "success": true}
+}

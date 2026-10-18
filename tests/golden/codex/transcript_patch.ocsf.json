@@ -1,0 +1,92 @@
+{
+  "action_id": 3,
+  "activity_id": 3,
+  "actor": {
+    "process": {
+      "name": "codex",
+      "pid": 0
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "OpenAI",
+      "name": "gpt-5-codex",
+      "uid": "gpt-5-codex"
+    },
+    "instance_uid": "sess-codex",
+    "name": "codex",
+    "type_id": 99,
+    "uid": "codex",
+    "version": "0.50.0"
+  },
+  "ai_model": {
+    "ai_provider": "OpenAI",
+    "name": "gpt-5-codex",
+    "uid": "gpt-5-codex"
+  },
+  "category_uid": 1,
+  "class_uid": 1001,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "approval_policy": "on-request",
+        "capture": "transcript",
+        "cwd": "/repo",
+        "hook_event": "transcript",
+        "sandbox": "workspace-write",
+        "source": "codex",
+        "tool_call_id": "call_2"
+      },
+      "name": "agent_posture",
+      "value": "codex"
+    }
+  ],
+  "file": {
+    "name": "app.py",
+    "path": "src/app.py",
+    "type_id": 1
+  },
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "codex",
+      "uid": "codex"
+    },
+    "prompt_text": "list the files",
+    "uid": "331e31885c568c4e"
+  },
+  "metadata": {
+    "correlation_uid": "sess-codex",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "11414a4efb885290dc41ebbcdf27392e",
+    "version": "1.9.0"
+  },
+  "observables": [
+    {
+      "name": "file.path",
+      "type_id": 45,
+      "value": "src/app.py"
+    }
+  ],
+  "severity_id": 1,
+  "status_id": 1,
+  "time": 1789898405000,
+  "type_uid": 100103
+}

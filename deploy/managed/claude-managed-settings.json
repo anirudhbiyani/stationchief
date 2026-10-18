@@ -1,0 +1,105 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed",
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/stationchief/venv/bin/python -m stationchief.cli hook claude  # stationchief-managed"
+          }
+        ]
+      }
+    ]
+  }
+}

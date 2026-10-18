@@ -1,0 +1,9 @@
+{
+  "stationchief": {
+    "approved_mcp_tools": [
+      "mcp__github__create_issue",
+      "mcp__github__list_issues",
+      "mcp__filesystem__read_file"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "conversation_id": "conv-xyz",
+  "generation_id": "gen-1",
+  "hook_event_name": "postToolUse",
+  "tool_name": "write",
+  "tool_input": {"path": "/repo/src/new.ts", "content": "export const a = 1"},
+  "tool_output": {"success": true},
+  "workspace_roots": ["/repo"]
+}

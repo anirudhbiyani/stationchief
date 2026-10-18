@@ -1,0 +1,37 @@
+title: AI agent permission probing within one session
+id: 8f3c1a52-4d6e-4a91-9b7c-0e2f5d8a1c33
+status: experimental
+description: >
+  An agent's tool calls were denied repeatedly inside a single session. One deny
+  is a developer saying no; a burst is an agent working around a boundary, or a
+  prompt injection steering it.
+references:
+  - https://schema.ocsf.io/1.9.0/classes/process_activity
+logsource:
+  product: ocsf
+  service: stationchief
+detection:
+  denied:
+    action_id: 2
+  condition: denied
+fields:
+  - metadata.correlation_uid
+  - process.cmd_line
+  - file.path
+falsepositives:
+  - A developer working in a tightly restricted allowlist and declining routinely.
+level: medium
+---
+title: AI agent permission probing within one session (correlation)
+id: 2b9e7c04-51af-4f38-8a16-6c4d9e0b7f21
+status: experimental
+correlation:
+  type: event_count
+  rules:
+    - 8f3c1a52-4d6e-4a91-9b7c-0e2f5d8a1c33
+  group-by:
+    - metadata.correlation_uid
+  timespan: 10m
+  condition:
+    gte: 5
+level: high

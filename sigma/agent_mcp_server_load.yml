@@ -1,0 +1,27 @@
+title: AI agent loaded an MCP server or plugin
+id: 7a0e3f91-8b25-4c7d-9e13-4f6a2b8d5c07
+status: experimental
+description: >
+  An agent loaded a third-party MCP server or plugin. Alert on servers not on
+  the organization's approved list; tune by adding known names to the filter.
+references:
+  - https://schema.ocsf.io/1.9.0/classes/application_lifecycle
+logsource:
+  product: ocsf
+  service: stationchief
+detection:
+  component_load:
+    class_uid: 6002
+  known_good:
+    application.name:
+      - filesystem
+      - github
+  condition: component_load and not known_good
+fields:
+  - metadata.correlation_uid
+  - application.name
+  - application.uid
+  - device.hostname
+falsepositives:
+  - Any approved server not yet added to the known_good filter.
+level: low

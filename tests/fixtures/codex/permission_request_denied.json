@@ -1,0 +1,8 @@
+{
+  "session_id": "codex-sess-1",
+  "hook_event_name": "PermissionRequest",
+  "tool_name": "shell",
+  "tool_input": {"command": ["bash", "-lc", "rm -rf /"]},
+  "decision": "denied",
+  "cwd": "/repo"
+}

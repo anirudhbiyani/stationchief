@@ -1,0 +1,7 @@
+{
+  "conversation_id": "conv-xyz",
+  "generation_id": "gen-1",
+  "hook_event_name": "beforeSubmitPrompt",
+  "prompt": "install the dependencies",
+  "workspace_roots": ["/repo"]
+}

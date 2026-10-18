@@ -1,0 +1,7 @@
+{
+  "conversation_id": "conv-xyz",
+  "generation_id": "gen-1",
+  "hook_event_name": "beforeShellExecution",
+  "command": "npm install",
+  "workspace_roots": ["/repo"]
+}
